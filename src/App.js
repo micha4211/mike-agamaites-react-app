@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Checking to make sure GitHub is working.
+          This published through the pipeline to S3
         </p>
         <a
           className="App-link"
