@@ -1,0 +1,23 @@
+version 0.2
+
+phases:
+    #download nodejs & npm
+    #install nodejs & npm
+  install:
+    commands:
+      - curl -fsSL https://deb.nodesource.com/setup_16.x | bash - 
+      - apt-get install -y nodejs
+    #install the react/Nodjs dependencis
+  pre_build:
+    commands:
+      - npm install
+    #transform reactJS code to static html/js/css
+  build:
+    commands:
+      - npm run build
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: build 
+  
